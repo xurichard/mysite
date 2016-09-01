@@ -54,3 +54,9 @@ def index(request):
 
 	return render(request, 'mainPage/index.html', context)
 
+
+def page404(request):
+	context = {}
+	return render(request, 'mainPage/page404.html', context)
+
+

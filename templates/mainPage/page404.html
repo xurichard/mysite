@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Richard Xu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'mainPage/assets/css/main.css' %}" />
+		<style type="text/css">
+		@font-face {
+			font-family: 'ManhattanDarling';
+			font-style: normal;
+			font-weight: normal;
+			src: url("{% static 'mainPage/ManhattanDarling/OTF/ManhattanDarling-Regular.otf' %}") format('truetype');
+		}
+		</style>
+	</head>
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="{% url 'mainPage:index' %}" style="font-family:ManhattanDarling; font-size:150%">Richard Xu</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="{% url 'mainPage:index' %}">Home</a></li>
+								<li><a href="{% url 'about:index' %}">About Me</a></li>
+								<li><a href="{% url 'photos:index' %}">Photography</a></li>
+								<li><a href="{% url 'blog:index' %}">Blog</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" style="background-image: url({% static 'mainPage/images/background.jpg'%});background-size: 100% 100%;">
+						<div class="inner">
+							<div class="logo"><span class="icon" ><img src="{% static 'mainPage/images/RX-white.png' %}" style="height:50%; width:50%;text-align: center;margin-top:25%"></span></div>
+							<h2 style="font-family: ManhattanDarling, Helvetica, sans-serif;font-size:4em;letter-spacing: 0.2em;">Richard Xu</h2>
+							<p> Bioengineer | Software Engineer | Photographer</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="{% static 'mainPage/images/panels/me.jpg'%}" alt="" /></a>
+									<div class="content">
+										<a href="{% url 'mainPage:index' %}">Return here!</a>
+									</div>
+								</div>
+							</section>
+					</section>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'mainPage/assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'mainPage/assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'mainPage/assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'mainPage/assets/js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static 'mainPage/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
